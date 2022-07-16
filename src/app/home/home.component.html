@@ -1,0 +1,28 @@
+<div class="row">
+    <div class="col-md-6">
+        <p class="py-2">Select Date 
+            <span>
+                <p-calendar [(ngModel)]="date" [showIcon]="true" inputId="icon" (onSelect)="onSelect()"></p-calendar>
+            </span>
+        </p>
+        <div class="text-center">
+            <div *ngIf="nasaImgObj?.media_type === 'image'">
+                <img [src]="nasaImgObj?.hdurl" alt="" style="max-width: 80%;">
+            </div>
+            <div id="video" *ngIf="nasaImgObj?.media_type === 'video'">
+                <iframe
+                  [src]="nasaImgObj?.url"
+                  width="560"
+                  height="315"
+                  frameborder="0"
+                  allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+        <p class="text-center py-2">Image Credit & Copyright: {{ nasaImgObj?.copyright }}</p>
+    </div>
+    <div class="col-md-6">
+        <h4 class="py-4">{{ nasaImgObj?.title}}</h4>
+        <p>{{ nasaImgObj?.explanation }}</p>
+    </div>
+</div>
