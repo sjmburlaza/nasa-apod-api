@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "nasa-potd-api": {
+    "nasa-apod-api": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/nasa-potd-api",
+            "outputPath": "dist/nasa-apod-api",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,10 +70,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "nasa-potd-api:build:production"
+              "browserTarget": "nasa-apod-api:build:production"
             },
             "development": {
-              "browserTarget": "nasa-potd-api:build:development"
+              "browserTarget": "nasa-apod-api:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -81,7 +81,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "nasa-potd-api:build"
+            "browserTarget": "nasa-apod-api:build"
           }
         },
         "test": {
